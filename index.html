@@ -18,6 +18,7 @@
         <div id="osd" style="width: 800px; height:600px; border: solid 1px black;"></div>
         <br/>
         <span>goTo: </span>
+        <button onclick="hEl.goToElementLocation('reset')">reset</button>
         <button onclick="hEl.goToElementLocation('sq')">div</button>
         <button onclick="hEl.goToElementLocation('vid')">vid</button>
         <button onclick="hEl.goToElementLocation('img')">img</button>
@@ -66,6 +67,7 @@
         height: 2000
       })
 
+      // HTML element with video embed
       var vid = document.createElement("iframe")
       vid.src = "https://www.youtube.com/embed/a3ICNMQW7Ok"
       vid.frameBorder = "0"
@@ -93,6 +95,7 @@
         }
       ])
 
+      // HTML element div yellow
       var sq = document.createElement("div")
       sq.style.backgroundColor = "rgba(40,200,100,0.2)"
       sq.style.border = "solid 1px yellow"
@@ -106,6 +109,21 @@
         height: 3000
       })
 
+      // HTML element div
+      var sq = document.createElement("div")
+      sq.style.backgroundColor = "rgba(0,0,0,0.0)"
+      sq.style.border = "solid 1px blue"
+
+      hEl.addElement({
+        id: "reset",
+        element: reset,
+        x: 0,
+        y: 0,
+        width: 5000,
+        height: 5000
+      })
+      
+      // HTML element textbox
       var textbox = document.createElement("div")
       textbox.style.backgroundColor = "rgba(200,200,200,0.8)"
       textbox.style.border = "solid 1px black"
