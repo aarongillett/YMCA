@@ -44,9 +44,16 @@
       var viewer = OpenSeadragon({
         id: "osd",
         prefixUrl: "//openseadragon.github.io/openseadragon/images/",
-        tileSources: duomo,
-        showRotationControl: true,
-        showFlipControl: true
+//        tileSources: duomo,
+        tileSources: {
+        type: 'image',
+        url:  'https://freight.cargo.site/t/original/i/8300b4fb239c01036738e88cff399f04d743644665e0970906354f65cdb71b3f/New-London-Plan-Response_LondonYMCA.png',
+        crossOriginPolicy: 'Anonymous'
+        ajaxWithCredentials: false
+    }
+        
+        showRotationControl: false,
+        showFlipControl: false
       })
 
       // --------------------------------------- //
